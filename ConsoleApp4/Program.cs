@@ -8,21 +8,28 @@ namespace ConsoleApp4
 {
     class Program
     {
+        static int i = 0;
         static void Main(string[] args)
         {
 
-
+            
             MethodA();
+            
         }
         public static void MethodA()
         {
             while (peanut())
             {
-                Console.WriteLine("i am  struck in a infinite loop");
+                Console.WriteLine(i);
+                if(i>10)
+                {
+                    return;
+                }
             }
         }
         public static bool peanut()
         {
+            i++;
             return true;
         }
     }
